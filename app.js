@@ -11,6 +11,7 @@ const searchSong = async () =>{
 const displaySongs = (songs) =>{
     const songContainer = document.getElementById('song-container');
     songContainer.innerHTML = "";
+    songLyricsDiv.innerText = "";
 
     songs.forEach(song => {
         const songDiv = document.createElement('div');
@@ -42,9 +43,9 @@ const getLyric = async (artist, title) =>{
     displayLyrics(data.lyrics)
     
 }   
+const songLyricsDiv = document.getElementById('song-lyrics')
 
 const displayLyrics = (lyrics) =>{
-    const songLyricsDiv = document.getElementById('song-lyrics')
 
     songLyricsDiv.innerText = lyrics;
     
